@@ -1,0 +1,48 @@
+/* Header.css */
+.changing-text {
+  transition: opacity 0.5s ease-in-out;
+  color: #ff5a5f; /* Golden color for a premium look */
+}
+
+.header-container {
+  margin: 150px;
+}
+
+.header-text h1 {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.header-text p {
+  font-size: 20px;
+  line-height: 2.5;
+  color: #fff;
+}
+
+.hero-btn {
+  display: inline-block;
+  background-color: #ff5a5f; /* Luxury red color */
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  width: 140px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-btn a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+}
+
+.hero-btn:hover {
+  background-color: #e0484d; /* Slightly darker red for hover effect */
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
