@@ -1,35 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <div className="navbar">
+    <nav className="navbar">
       <div className="navbar__logo">
         <img src="" alt="Pal-Aviation Logo" />
-        {/* <a href="/">Pal-Aviation</a> */}
       </div>
-      <ul className="navbar__links">
+
+      {/* Hamburger Menu for Mobile */}
+      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? <FaTimes /> : <FaBars />}
+      </div>
+
+      <ul className={`navbar__links ${menuOpen ? "open" : ""}`}>
         <li>
-          <a href="/">Home</a>
+          <a href="/" onClick={() => setMenuOpen(false)}>
+            Home
+          </a>
         </li>
         <li>
-          <a href="/flights">Flights & Destination</a>
+          <a href="/flights" onClick={() => setMenuOpen(false)}>
+            Flights & Destination
+          </a>
         </li>
         <li>
-          <a href="/rentals">Rentals</a>
+          <a href="/rentals" onClick={() => setMenuOpen(false)}>
+            Rentals
+          </a>
         </li>
         <li>
-          <a href="/about">About Us</a>
+          <a href="/about" onClick={() => setMenuOpen(false)}>
+            About Us
+          </a>
         </li>
         <li>
-          <a href="/contact">Contact</a>
+          <a href="/contact" onClick={() => setMenuOpen(false)}>
+            Contact
+          </a>
         </li>
       </ul>
 
       <div className="nav-btn">
         <a href="#">Request Quote</a>
       </div>
-    </div>
+    </nav>
   );
 };
 

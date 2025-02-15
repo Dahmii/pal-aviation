@@ -1,14 +1,35 @@
-/* Header.css */
+body {
+  background: url(../../assets/img/background.jpg) no-repeat center center/cover;
+  font-family: "poppins", sans-serif;
+  /* margin: 50px 50px 0 50px; */
+  height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+/* General Styles */
+.header-container {
+  margin: 150px auto;
+  text-align: left;
+  max-width: 90%;
+}
+
+/* Animated Changing Text */
 .changing-text {
   transition: opacity 0.5s ease-in-out;
-  color: #ff5a5f; /* Golden color for a premium look */
+  color: #ff5a5f;
   font-style: italic;
 }
 
-.header-container {
-  margin: 150px;
-}
-
+/* Header Text */
 .header-text h1 {
   margin-bottom: 20px;
   color: #fff;
@@ -18,10 +39,11 @@
 
 .header-text p {
   font-size: 20px;
-  line-height: 2.5;
+  line-height: 1.8;
   color: #fff;
 }
 
+/* Button */
 .hero-btn {
   display: inline-block;
   background-color: #ff5a5f; /* Luxury red color */
@@ -32,6 +54,7 @@
   text-align: center;
   transition: all 0.3s ease-in-out;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
 }
 
 .hero-btn a {
@@ -43,7 +66,68 @@
 }
 
 .hero-btn:hover {
-  background-color: #e0484d; /* Slightly darker red for hover effect */
+  background-color: #e0484d;
   transform: scale(1.05);
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .header-container {
+    margin: 100px auto;
+    height: 40vh;
+  }
+
+  .header-text {
+    margin-top: 100px;
+  }
+  .header-text h1 {
+    font-size: 40px;
+  }
+
+  .header-text p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    margin: 80px auto;
+  }
+
+  .header-text h1 {
+    font-size: 32px;
+  }
+
+  .header-text p {
+    font-size: 16px;
+  }
+
+  .hero-btn {
+    width: 120px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    margin: 50px auto;
+    text-align: center;
+    max-width: 95%;
+  }
+
+  .header-text h1 {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+
+  .header-text p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .hero-btn {
+    width: 110px;
+    padding: 8px;
+  }
 }
