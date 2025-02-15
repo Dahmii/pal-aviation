@@ -2,6 +2,7 @@
 .changing-text {
   transition: opacity 0.5s ease-in-out;
   color: #ff5a5f; /* Golden color for a premium look */
+  font-style: italic;
 }
 
 .header-container {
