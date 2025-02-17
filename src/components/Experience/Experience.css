@@ -1,0 +1,111 @@
+.experience-container {
+  padding: 80px 5%;
+  background: #f4f8fc;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+  gap: 30px;
+}
+
+.text {
+  flex: 1;
+}
+
+.text h2 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.text ul li {
+  font-size: 1.1rem;
+  padding: 8px 0;
+  color: #444;
+  position: relative;
+  padding-left: 25px;
+}
+
+.text ul li::before {
+  content: "✈";
+  position: absolute;
+  left: 0;
+  color: #ff5a5f;
+  font-weight: bold;
+}
+
+.sub-list {
+  margin-top: 8px;
+  padding-left: 20px;
+}
+
+.sub-list li {
+  font-size: 1rem;
+  color: #666;
+  padding-left: 15px;
+  position: relative;
+}
+
+.sub-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #ff5a5f;
+  font-size: 1.2rem;
+}
+
+.experience-img {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.experience-img img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text ul {
+    text-align: left;
+  }
+
+  .experience-img {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .experience-img img {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-img {
+    flex-direction: column;
+  }
+
+  .experience-img img {
+    max-width: 100%;
+  }
+}
