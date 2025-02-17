@@ -61,9 +61,7 @@ const Footer = () => {
           <ul>
             <li>
               Email:{" "}
-              <a href="mailto:support@pal-aviation.com">
-                support@pal-aviation.com
-              </a>
+              <a href="mailto:info@pal-aviation.com">info@pal-aviation.com</a>
             </li>
             <li>
               Phone: <a href="tel:+1234567890">+1 234 567 890</a>
