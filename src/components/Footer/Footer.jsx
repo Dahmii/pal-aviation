@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import logo from "../../assets/img/palav-01.png";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
@@ -8,7 +9,7 @@ const Footer = () => {
       <div className="footer-content">
         {/* Logo */}
         <div className="footer-logo">
-          <img src="../../assets/img/logo.png" alt="Pal-Aviation logo" />
+          <img src={logo} alt="Pal-Aviation logo" />
         </div>
 
         {/* Learn More Section */}
@@ -64,7 +65,7 @@ const Footer = () => {
               <a href="mailto:info@pal-aviation.com">info@pal-aviation.com</a>
             </li>
             <li>
-              Phone: <a href="tel:+1234567890">+1 234 567 890</a>
+              Phone: <a href="tel:+23449156301638">+234 4915-630-1638</a>
             </li>
           </ul>
         </div>
@@ -73,18 +74,18 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Follow Us</h3>
           <div className="footer-socials">
-            <a href="#">
+            {/* <a href="#">
               <FaFacebook />
             </a>
             <a href="#">
               <FaTwitter />
-            </a>
-            <a href="#">
+            </a> */}
+            <a href="https://www.instagram.com/paljetservices?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
               <FaInstagram />
             </a>
-            <a href="#">
+            {/* <a href="#">
               <FaLinkedin />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

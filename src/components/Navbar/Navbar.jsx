@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import logo from "../../assets/img/palav-01.png";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -8,7 +9,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar__logo">
-        <img src="" alt="Pal-Aviation Logo" />
+        <img src={logo} alt="Pal-Aviation Logo" />
       </div>
 
       {/* Hamburger Menu for Mobile */}
@@ -23,22 +24,22 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="/flights" onClick={() => setMenuOpen(false)}>
+          <a href="#" onClick={() => setMenuOpen(false)}>
             Flights & Destination
           </a>
         </li>
         <li>
-          <a href="/rentals" onClick={() => setMenuOpen(false)}>
+          <a href="#" onClick={() => setMenuOpen(false)}>
             Rentals
           </a>
         </li>
         <li>
-          <a href="/about" onClick={() => setMenuOpen(false)}>
+          <a href="#" onClick={() => setMenuOpen(false)}>
             About Us
           </a>
         </li>
         <li>
-          <a href="/contact" onClick={() => setMenuOpen(false)}>
+          <a href="#" onClick={() => setMenuOpen(false)}>
             Contact
           </a>
         </li>
