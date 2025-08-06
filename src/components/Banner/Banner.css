@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Petit+Formal+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.banner-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-top: 100px;
+  position: relative;
+}
+
+.banner-content {
+  width: 100vw;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.banner-content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Overlay for text readability */
+  z-index: 1;
+}
+
+.banner-text {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+}
+
+.banner-text h1 {
+  font-size: 2.5rem;
+  font-family: "Libertinus Sans", sans-serif;
+  margin: 16px auto;
+}
+
+.banner-text p {
+  font-size: 1rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.banner-btn {
+  display: block;
+  background-color: #ff5a5f; /* Luxury red color */
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  width: 200px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+}
+
+.banner-btn a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: block;
+}
+
+.banner-btn:hover {
+  background-color: #e0484d;
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}

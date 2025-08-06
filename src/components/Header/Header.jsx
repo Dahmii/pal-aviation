@@ -19,18 +19,20 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="header-container">
-      <div className="header-text">
-        <h1>
-          Experience the <br /> Epitome of{" "}
-          <span className="changing-text">{words[index]}</span>
-        </h1>
-        <p>Customized travel solutions for everyday journeys...</p>
+    <section className="header-section">
+      <div className="header-container">
+        <div className="header-text">
+          <h1>
+            Experience the <br /> Epitome of{" "}
+            <span className="changing-text">{words[index]}</span>
+          </h1>
+          <p>Customized travel solutions for everyday journeys...</p>
+        </div>
+        <div className="hero-btn">
+          <a href="#book-now">Book Now!</a>
+        </div>
       </div>
-      <div className="hero-btn">
-        <a href="#book-now">Book Now!</a>
-      </div>
-    </div>
+    </section>
   );
 };
 

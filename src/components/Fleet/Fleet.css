@@ -1,0 +1,69 @@
+.fleet-container {
+  padding: 80px 10%;
+  background-color: #ffffff;
+}
+
+.fleet-text h2 {
+  color: #4a4a4a;
+  font-family: "Libertinus Sans", sans-serif;
+  font-size: 2rem;
+}
+
+.fleet-text p {
+  color: #4a4a4a;
+  font-size: 0.9rem;
+  font-family: "Lato", sans-serif;
+}
+
+.fleet-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; /* Adds space between cards */
+}
+
+.fleet-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f8f8f8;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.fleet-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  margin-bottom: 16px;
+}
+
+.fleet-card h3 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.fleet-card p {
+  color: #4a4a4a;
+  font-size: 0.95rem;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .fleet-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .fleet-card {
+    max-width: 95%;
+    width: 100%;
+  }
+}

@@ -6,16 +6,20 @@ import About from "./components/About/About";
 import Services from "./components/Services/Services";
 import Experience from "./components/Experience/Experience";
 import Contact from "./components/Contact/Contact";
+import Fleet from "./components/Fleet/Fleet";
+import Banner from "./components/Banner/Banner";
 
 const App = () => {
   return (
     <div>
       <Navbar />
       <Header />
+      <Fleet />
+      <Experience />
       <About />
       <Services />
-      <Experience />
       <Contact />
+      <Banner />
       <Footer />
     </div>
   );

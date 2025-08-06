@@ -1,82 +1,75 @@
 .experience-container {
-  padding: 80px 5%;
-  background: #f4f8fc;
-  text-align: center;
+  padding: 80px 10%;
+  background: #ffffff;
+  /* text-align: center; */
 }
 
 .content {
-  display: flex;
+  display: block;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   max-width: 1200px;
   margin: 0 auto;
-  text-align: left;
   gap: 30px;
 }
 
-.text {
-  flex: 1;
+.experience-header {
+  margin-bottom: 50px;
 }
 
-.text h2 {
+.experience-header h2 {
   font-size: 2rem;
-  color: #003366;
-  margin-bottom: 20px;
-}
-
-.text ul {
-  list-style: none;
-  padding: 0;
-}
-
-.text ul li {
-  font-size: 1.1rem;
-  padding: 8px 0;
-  color: #444;
-  position: relative;
-  padding-left: 25px;
-}
-
-.text ul li::before {
-  content: "✈";
-  position: absolute;
-  left: 0;
   color: #ff5a5f;
-  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
 }
 
-.sub-list {
-  margin-top: 8px;
-  padding-left: 20px;
+.experience-banner {
+  display: flex;
+  width: 100%;
+  align-items: stretch; /* Ensures both sides are equal height */
+  background: #fcfcfc;
+  background: linear-gradient(
+    90deg,
+    rgba(252, 252, 252, 1) 0%,
+    rgba(240, 240, 240, 1) 100%
+  );
+  margin-bottom: 90px;
 }
 
-.sub-list li {
-  font-size: 1rem;
-  color: #666;
-  padding-left: 15px;
-  position: relative;
+.experience-banner .left,
+.experience-banner .right {
+  width: 50%;
+  margin-bottom: 0; /* Remove bottom margin for equal height */
 }
 
-.sub-list li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #ff5a5f;
-  font-size: 1.2rem;
-}
-
-.experience-img {
-  flex: 1;
+.left {
+  padding: 20px;
+  margin: 0; /* Remove vertical margin for equal height */
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  justify-content: center; /* Vertically center content */
 }
 
-.experience-img img {
+.left h2 {
+  color: #333;
+  font-family: "Libertinus Sans", sans-serif;
+}
+
+.left p {
+  color: #4a4a4a;
+  font-family: "Poppins", sans-serif;
+}
+
+.right {
+  display: flex;
+  align-items: stretch;
+}
+
+.right img {
   width: 100%;
-  max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (max-width: 768px) {
@@ -98,6 +91,29 @@
   .experience-img img {
     max-width: 45%;
   }
+
+  .experience-banner {
+    flex-direction: column;
+  }
+  .experience-banner .right {
+    width: 100%;
+  }
+  .experience-banner .left {
+    width: 90%;
+  }
+  .right {
+    order: 1;
+  }
+  .left {
+    order: 2;
+    align-items: left;
+    text-align: left;
+  }
+  .right img {
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+  }
 }
 
 @media (max-width: 480px) {
@@ -108,4 +124,27 @@
   .experience-img img {
     max-width: 100%;
   }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.experience-banner .left,
+.experience-banner .right {
+  opacity: 0;
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.experience-banner.visible .left,
+.experience-banner.visible .right {
+  animation: fadeInLeft 0.8s forwards;
+  opacity: 1;
 }
