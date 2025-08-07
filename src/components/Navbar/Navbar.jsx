@@ -50,7 +50,7 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="#" onClick={() => setMenuOpen(false)}>
+          <a href="about-us" onClick={() => setMenuOpen(false)}>
             About Us
           </a>
         </li>
@@ -62,7 +62,7 @@ const Navbar = () => {
       </ul>
 
       <div className="nav-btn">
-        <a href="#">Request Quote</a>
+        <a href="request-quote">Request Quote</a>
       </div>
     </nav>
   );

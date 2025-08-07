@@ -1,0 +1,80 @@
+.quote-main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 60vh;
+  background: #fff;
+  padding: 40px 0;
+}
+
+.quote-form {
+  background: #f8f8f8;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 32px 24px;
+  max-width: 540px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.quote-form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.quote-form input,
+.quote-form textarea {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  color: #333;
+  transition: border 0.2s;
+}
+
+.quote-form input:focus,
+.quote-form textarea:focus {
+  border: 1.5px solid #ff5a5f;
+  outline: none;
+}
+
+.quote-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.quote-btn {
+  background: #ff5a5f;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 14px 0;
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.quote-btn:hover {
+  background: #e14b50;
+  transform: translateY(-2px) scale(1.03);
+}
+
+@media (max-width: 600px) {
+  .quote-form {
+    padding: 18px 6px;
+  }
+  .quote-form-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
