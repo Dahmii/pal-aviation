@@ -6,7 +6,7 @@ const Header = ({
   subtitle,
   showAnimatedText = true,
   buttonText = "Book Now!",
-  buttonLink = "#book-now",
+  buttonLink = "request-quote",
   showButton = true,
   children,
 }) => {
