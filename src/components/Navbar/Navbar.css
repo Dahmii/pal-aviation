@@ -94,11 +94,12 @@
 @media (max-width: 768px) {
   .navbar {
     padding: 12px 10px;
-    width: 90%;
+    width: 100%;
   }
 
   .hamburger {
     display: block;
+    margin-right: 20px;
   }
 
   .navbar__links {
