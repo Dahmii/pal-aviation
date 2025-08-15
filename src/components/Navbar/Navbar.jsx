@@ -49,8 +49,14 @@ const Navbar = () => {
         {/* MAIN MENU */}
         {sidebarPage === "main" && (
           <ul className="sidebar-links">
-            <li onClick={() => setSidebarPage("membership")}>Membership</li>
+            <li>
+              <Link to="/members" onClick={closeMenu}>
+                Membership
+              </Link>
+            </li>
+            {/* <li onClick={() => setSidebarPage("membership")}>Membership</li> */}
             <li onClick={() => setSidebarPage("fleet")}>Fleet</li>
+
             <li>
               <a href="#experience" onClick={closeMenu}>
                 Experience
