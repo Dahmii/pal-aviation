@@ -1,70 +1,154 @@
-import React, { useEffect, useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaBars, FaTimes, FaArrowLeft } from "react-icons/fa";
 import logo from "../../assets/img/palav-01.png";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [hidden, setHidden] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [sidebarPage, setSidebarPage] = useState("main"); // "main", "membership", "fleet"
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > lastScrollY && window.scrollY > 80) {
-        setHidden(true); // Hide navbar when scrolling down
-      } else {
-        setHidden(false); // Show navbar when scrolling up
-      }
-      setLastScrollY(window.scrollY);
-    };
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+    setSidebarPage("main"); // reset to main menu
+  };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  const closeMenu = () => {
+    setMenuOpen(false);
+    setSidebarPage("main");
+  };
 
   return (
-    <nav className={`navbar${hidden ? " navbar--hidden" : ""}`}>
-      <div className="navbar__logo">
-        <img src={logo} alt="Pal-Aviation Logo" />
+    <>
+      {/* Top Navbar */}
+      <nav className="top-navbar">
+        <div className="hamburger-btn" onClick={toggleMenu}>
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </div>
+
+        <ul className="nav-links">
+          <li>
+            <Link to="/members">Membership</Link>
+          </li>
+          <li>
+            <Link to="/fleetpage">Fleet</Link>
+          </li>
+          <li>
+            <Link to="/experience">Experience</Link>
+          </li>
+        </ul>
+      </nav>
+
+      {/* Sidebar */}
+      <div className={`sidebar ${menuOpen ? "open" : ""}`}>
+        <div className="sidebar-header">
+          <Link to="/">
+            <img src={logo} alt="Pal-Aviation Logo" />
+          </Link>
+        </div>
+        {/* MAIN MENU */}
+        {sidebarPage === "main" && (
+          <ul className="sidebar-links">
+            <li onClick={() => setSidebarPage("membership")}>Membership</li>
+            <li onClick={() => setSidebarPage("fleet")}>Fleet</li>
+            <li>
+              <a href="#experience" onClick={closeMenu}>
+                Experience
+              </a>
+            </li>
+            <li>
+              <Link to="/" onClick={closeMenu}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <a href="about-us" onClick={closeMenu}>
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="#contact" onClick={closeMenu}>
+                Contact
+              </a>
+            </li>
+          </ul>
+        )}
+        {/* MEMBERSHIP MENU */}
+        {sidebarPage === "membership" && (
+          <ul className="sidebar-links">
+            <li className="back-btn" onClick={() => setSidebarPage("main")}>
+              <FaArrowLeft /> Back
+            </li>
+            <li>
+              <a href="#gold" onClick={closeMenu}>
+                Gold Membership
+              </a>
+            </li>
+            <li>
+              <a href="#silver" onClick={closeMenu}>
+                Silver Membership
+              </a>
+            </li>
+          </ul>
+        )}
+        {/* FLEET MENU */}
+        {sidebarPage === "fleet" && (
+          <ul className="sidebar-links">
+            <li className="back-btn" onClick={() => setSidebarPage("main")}>
+              <FaArrowLeft /> Back
+            </li>
+            <li>
+              <a href="FleetPage" onClick={closeMenu}>
+                Bombardier
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={closeMenu}>
+                Gulfstream G550/GIV
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={closeMenu}>
+                Embraer Legacy 600
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={closeMenu}>
+                Challenger 605
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={closeMenu}>
+                Challenger 604
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={closeMenu}>
+                Hawker XP
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={closeMenu}>
+                Learjet
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={closeMenu}>
+                AW139 Helicopter
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={closeMenu}>
+                AW109 Helicopter
+              </a>
+            </li>
+          </ul>
+        )}
       </div>
 
-      {/* Hamburger Menu for Mobile */}
-      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-        {menuOpen ? <FaTimes /> : <FaBars />}
-      </div>
-
-      <ul className={`navbar__links ${menuOpen ? "open" : ""}`}>
-        <li>
-          <a href="/" onClick={() => setMenuOpen(false)}>
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="#" onClick={() => setMenuOpen(false)}>
-            Flights & Destination
-          </a>
-        </li>
-        <li>
-          <a href="#" onClick={() => setMenuOpen(false)}>
-            Rentals
-          </a>
-        </li>
-        <li>
-          <a href="about-us" onClick={() => setMenuOpen(false)}>
-            About Us
-          </a>
-        </li>
-        <li>
-          <a href="#" onClick={() => setMenuOpen(false)}>
-            Contact
-          </a>
-        </li>
-      </ul>
-
-      <div className="nav-btn">
-        <a href="request-quote">Request Quote</a>
-      </div>
-    </nav>
+      {/* Overlay */}
+      {menuOpen && <div className="overlay" onClick={closeMenu}></div>}
+    </>
   );
 };
 

@@ -1,0 +1,31 @@
+.members-container {
+  padding: 80px 10%;
+  background: #ffffff;
+  /* text-align: center; */
+}
+
+.members-content {
+  display: block;
+  justify-content: space-between;
+  /* align-items: center; */
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.members-header {
+  margin-bottom: 20px;
+}
+
+.members-header h1 {
+  font-size: 4.5rem;
+  color: #ff5a5f;
+  margin-top: 20px;
+  font-family: "Libertinus Sans", sans-serif;
+}
+
+.members-header p {
+  margin-bottom: 100px;
+  font-family: "Poppins", sans-serif;
+  color: #4a4a4a;
+}

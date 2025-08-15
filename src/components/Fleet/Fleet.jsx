@@ -3,6 +3,7 @@ import "./Fleet.css";
 import img1 from "../../assets/img/Bombardier-Global-6000.jfif";
 import img2 from "../../assets/img/Gulfstream-GIV-SP.jfif";
 import img3 from "../../assets/img/Bombardier-Dash-8.jfif";
+import { Link } from "react-router-dom";
 
 const Fleet = () => {
   return (
@@ -57,6 +58,10 @@ const Fleet = () => {
               ride—perfect for group charters and regional operations.
             </p>
           </div>
+        </div>
+
+        <div className="fleet-btn">
+          <Link to="/fleetpage">Explore our Fleet</Link>
         </div>
       </div>
     </section>

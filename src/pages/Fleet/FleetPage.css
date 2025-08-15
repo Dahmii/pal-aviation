@@ -1,0 +1,156 @@
+.fleet-container {
+  padding: 80px 10%;
+  background: #ffffff;
+  /* text-align: center; */
+}
+
+.fleet-content {
+  display: block;
+  justify-content: space-between;
+  /* align-items: center; */
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.fleet-header {
+  margin-bottom: 20px;
+}
+
+.fleet-header h1 {
+  font-size: 4.5rem;
+  color: #ff5a5f;
+  margin-top: 20px;
+  font-family: "Libertinus Sans", sans-serif;
+}
+
+.fleet-header p {
+  margin-bottom: 100px;
+  font-family: "Poppins", sans-serif;
+  color: #4a4a4a;
+}
+
+.fleet-banner {
+  display: flex;
+  width: 100%;
+  align-items: stretch; /* Ensures both sides are equal height */
+  background: #fcfcfc;
+  background: linear-gradient(
+    90deg,
+    rgba(252, 252, 252, 1) 0%,
+    rgba(240, 240, 240, 1) 100%
+  );
+  margin-bottom: 90px;
+}
+
+.fleet-banner .left,
+.fleet-banner .right {
+  width: 50%;
+  margin-bottom: 0; /* Remove bottom margin for equal height */
+}
+
+.left {
+  padding: 20px;
+  margin: 0; /* Remove vertical margin for equal height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+}
+
+.left h2 {
+  color: #333;
+  font-family: "Libertinus Sans", sans-serif;
+}
+
+.left p {
+  color: #4a4a4a;
+  font-family: "Poppins", sans-serif;
+}
+
+.right {
+  display: flex;
+  align-items: stretch;
+}
+
+.right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text ul {
+    text-align: left;
+  }
+
+  .fleet-img {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .fleet-img img {
+    max-width: 45%;
+  }
+
+  .fleet-banner {
+    flex-direction: column;
+  }
+  .fleet-banner .right {
+    width: 100%;
+  }
+  .fleet-banner .left {
+    width: 90%;
+  }
+  .right {
+    order: 1;
+  }
+  .left {
+    order: 2;
+    align-items: left;
+    text-align: left;
+  }
+  .right img {
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 480px) {
+  .fleet-img {
+    flex-direction: column;
+  }
+
+  .fleet-img img {
+    max-width: 100%;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fleet-banner .left,
+.fleet-banner .right {
+  opacity: 0;
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.fleet-banner.visible .left,
+.fleet-banner.visible .right {
+  animation: fadeInLeft 0.8s forwards;
+  opacity: 1;
+}

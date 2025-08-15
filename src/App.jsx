@@ -9,8 +9,11 @@ import Experience from "./components/Experience/Experience";
 import Contact from "./components/Contact/Contact";
 import Fleet from "./components/Fleet/Fleet";
 import Banner from "./components/Banner/Banner";
-import AboutUs from "./pages/About-us/About-us"; // Import your About Us page
-import RequestQuote from "./pages/RequestQuote/RequestQuote"; // Import Request Quote page
+import Membership from "./components/Membership/Membership";
+import AboutUs from "./pages/About-us/About-us";
+import RequestQuote from "./pages/RequestQuote/RequestQuote";
+import FleetPage from "./pages/Fleet/FleetPage";
+import Members from "./pages/Members/Members";
 
 const App = () => {
   return (
@@ -22,6 +25,7 @@ const App = () => {
           element={
             <>
               <Header />
+              <Membership />
               <Fleet />
               <Experience />
               <About />
@@ -33,6 +37,8 @@ const App = () => {
         />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/request-quote" element={<RequestQuote />} />
+        <Route path="/FleetPage" element={<FleetPage />} />
+        <Route path="/members" element={<Members />} />
         {/* Add more routes as needed */}
       </Routes>
       <Footer />

@@ -6,7 +6,7 @@ const Header = ({
   subtitle,
   showAnimatedText = true,
   buttonText = "Book Now!",
-  buttonLink = "request-quote",
+  buttonLink = "/request-quote",
   showButton = true,
   children,
 }) => {
@@ -29,6 +29,23 @@ const Header = ({
 
   return (
     <section className="header-section">
+      {/* Video Background */}
+      <video
+        className="header-video"
+        autoPlay
+        loop
+        muted
+        playsInline
+        poster="../../assets/img/background-1.JPG"
+      >
+        <source src="/header-vid.webm" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Overlay for dimming effect */}
+      <div className="header-overlay"></div>
+
+      {/* Content */}
       <div className="header-container">
         <div className="header-text">
           {showAnimatedText ? (
@@ -41,12 +58,13 @@ const Header = ({
           )}
           <p>
             {showAnimatedText
-              ? "Customized travel solutions for everyday journeys..."
+              ? "Customized travel solutions for unforgettable journeys."
               : subtitle ||
-                "Customized travel solutions for everyday journeys..."}
+                "Customized travel solutions for unforgettable journeys."}
           </p>
           {children}
         </div>
+
         {showButton && (
           <div className="hero-btn">
             <a href={buttonLink}>{buttonText}</a>
