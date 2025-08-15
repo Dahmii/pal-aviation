@@ -35,10 +35,10 @@ const Experience = () => {
           <div className="left">
             <h2>A World-Class Fleet</h2>
             <p>
-              PalJet’s globally available fleet is built for every journey —
-              whether you need a fully equipped flying office or a comfortable,
-              private retreat in the sky. Our aircraft deliver consistent
-              luxury, performance, and versatility wherever you go.
+              Pal Aviation’s globally available fleet is built for every journey
+              — whether you need a fully equipped flying office or a
+              comfortable, private retreat in the sky. Our aircraft deliver
+              consistent luxury, performance, and versatility wherever you go.
             </p>
           </div>
           <div className="right">
@@ -54,13 +54,14 @@ const Experience = () => {
             <img src={img2} alt="Aircraft Hangar" />
           </div>
           <div className="left">
-            <h2>A Private World for PalJet Clients</h2>
+            <h2>A Private World for Pal Aviation Clients</h2>
             <p>
-              PalJet clients enjoy exclusive access to exceptional experiences
-              through our global network of trusted partners and advisors. From
-              tailored travel arrangements to curated lifestyle privileges, our
-              team is always on hand to provide seamless support—ensuring every
-              journey feels truly personal and world-class.
+              Pal Aviation clients enjoy exclusive access to exceptional
+              experiences through our global network of trusted partners and
+              advisors. From tailored travel arrangements to curated lifestyle
+              privileges, our team is always on hand to provide seamless
+              support—ensuring every journey feels truly personal and
+              world-class.
             </p>
           </div>
         </div>
@@ -70,11 +71,11 @@ const Experience = () => {
           ref={(el) => (bannersRef.current[2] = el)}
         >
           <div className="left">
-            <h2>Beyond the Skies with PalJet</h2>
+            <h2>Beyond the Skies with Pal Aviation</h2>
             <p>
-              Step into a world where luxury meets precision. At PalJet, we
-              don’t just fly you—we craft a tailored experience that extends far
-              beyond the runway. From exclusive event access to personalized
+              Step into a world where luxury meets precision. At Pal Aviation,
+              we don’t just fly you—we craft a tailored experience that extends
+              far beyond the runway. From exclusive event access to personalized
               concierge services, our global network ensures every journey is
               effortless, elegant, and entirely yours.
             </p>

@@ -12,8 +12,8 @@ const Fleet = () => {
         <div className="fleet-text">
           <h2>Fleet</h2>
           <p>
-            PalJet offers diverse fleets that cater to various travel needs,
-            from executive jets designed for efficient business trips to
+            Pal Aviation offers diverse fleets that cater to various travel
+            needs, from executive jets designed for efficient business trips to
             Luxurious cabins perfect for family vacations and group getaways, as
             well as commercial airliners.
           </p>

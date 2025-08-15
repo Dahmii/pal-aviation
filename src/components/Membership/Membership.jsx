@@ -9,7 +9,7 @@ const Membership = () => {
         <div className="membership-text">
           <h2>Memberships</h2>
           <p>
-            Experience the pinnacle of private air travel with PalJet. Our
+            Experience the pinnacle of private air travel with Pal Aviation. Our
             exclusive membership grants you access to a world-class fleet and
             24/7 personalized concierge service—ensuring every journey is
             seamless, stylish, and unforgettable.

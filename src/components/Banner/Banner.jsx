@@ -12,14 +12,14 @@ const Banner = () => {
         }}
       >
         <div className="banner-text">
-          <h1>The PalJet Experience</h1>
+          <h1>The Pal Aviation Experience</h1>
           <p>
-            Curious about how PalJet can serve your unique travel needs? Let us
-            create a personalized flight plan just for you. Share your most
-            frequent destinations, base location, travel purpose, preferred
+            Curious about how Pal Aviation can serve your unique travel needs?
+            Let us create a personalized flight plan just for you. Share your
+            most frequent destinations, base location, travel purpose, preferred
             aircraft type, and peak travel seasons—and our expert aviation team
             will craft a tailored experience that shows exactly what flying with
-            PalJet can look like.
+            Pal Aviation can look like.
           </p>
           <button className="banner-btn">
             <a href="#book-now">Make an Enquiry</a>

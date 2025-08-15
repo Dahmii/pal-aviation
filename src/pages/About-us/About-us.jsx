@@ -11,7 +11,7 @@ const AboutUs = () => {
         showButton={false}
         title={
           <>
-            About <span style={{ color: "#ff5a5f" }}>PalJet</span>
+            About <span style={{ color: "#ff5a5f" }}>Pal Aviation</span>
           </>
         }
         subtitle="Discover our story, values, and commitment to luxury air travel."

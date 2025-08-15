@@ -35,7 +35,7 @@ const FleetPage = () => {
     <section className="fleet-container">
       <div className="fleet-content">
         <div className="fleet-header">
-          <h1>Fleet</h1>
+          <h2>Fleet</h2>
           <p>Discover Our Exquisite Fleet Collection</p>
         </div>
         <div

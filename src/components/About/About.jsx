@@ -22,19 +22,20 @@ const About = () => {
     <section className="about-container">
       <div className="about-content">
         <div className="about-text" ref={textRef}>
-          <h2>About PalJet</h2>
+          <h2>About Pal Aviation</h2>
           <p>
-            <strong>PalJet</strong> is committed to providing luxury, safety,
-            and reliability in every flight. Our team of experienced
+            <strong>Pal Aviation</strong> is committed to providing luxury,
+            safety, and reliability in every flight. Our team of experienced
             professionals ensures that your journey is smooth and tailored to
             your needs. We understand that time is valuable, which is why we
             offer flexible scheduling and a range of aircraft to suit any
             requirement. Whether you're flying for business or leisure,{" "}
-            <strong>PalJet</strong> is your trusted partner in private aviation.
+            <strong>Pal Aviation</strong> is your trusted partner in private
+            aviation.
           </p>
         </div>
         <div className="about-image">
-          <img src={aboutImg} alt="About PalJet" />
+          <img src={aboutImg} alt="About Pal Aviation" />
         </div>
       </div>
     </section>
