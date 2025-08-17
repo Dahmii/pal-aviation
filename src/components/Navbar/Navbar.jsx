@@ -48,7 +48,9 @@ const Navbar = () => {
           <span className="call-us">
             Call Us: <u>+234 4915-630-1638</u>
           </span>
-          <button className="quote-btn">Request a Quote</button>
+          <Link to="/request-quote" className="quote-btn">
+            Request Quote
+          </Link>
         </div>
       </nav>
 
