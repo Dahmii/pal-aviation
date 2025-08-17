@@ -1,31 +1,61 @@
 .members-container {
   padding: 80px 10%;
-  background: #ffffff;
-  /* text-align: center; */
-}
-
-.members-content {
-  display: block;
-  justify-content: space-between;
-  /* align-items: center; */
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 30px;
+  background: #f9f9f9;
 }
 
 .members-header {
-  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .members-header h2 {
-  font-size: 3rem;
-  color: #ff5a5f;
-  margin-top: 20px;
-  font-family: "Mylius Modern", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
-.members-header p {
-  margin-bottom: 100px;
-  font-family: "Poppins", sans-serif;
-  color: #4a4a4a;
+.members-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.members-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+
+.members-card:hover {
+  transform: translateY(-5px);
+}
+
+.members-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.members-card h3 {
+  margin: 10px 0;
+  color: #222;
+}
+
+.members-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.members-contact {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1rem;
+}
+
+.members-contact span {
+  color: #ff5a5f;
+  font-weight: 600;
 }
