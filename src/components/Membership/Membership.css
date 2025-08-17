@@ -5,7 +5,7 @@
 
 .membership-text h2 {
   color: #4a4a4a;
-  font-family: "Libertinus Sans", sans-serif;
+  font-family: "Mylius Modern", sans-serif;
   font-size: 2.5rem;
 }
 
@@ -88,4 +88,17 @@
   background-color: #e0484d;
   transform: scale(1.05);
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .membership-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .membership-card {
+    max-width: 95%;
+    width: 100%;
+  }
 }

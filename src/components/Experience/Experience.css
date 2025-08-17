@@ -27,7 +27,7 @@
 .experience-banner {
   display: flex;
   width: 100%;
-  align-items: stretch; /* Ensures both sides are equal height */
+  align-items: stretch;
   background: #fcfcfc;
   background: linear-gradient(
     90deg,
@@ -40,20 +40,20 @@
 .experience-banner .left,
 .experience-banner .right {
   width: 50%;
-  margin-bottom: 0; /* Remove bottom margin for equal height */
+  margin-bottom: 0;
 }
 
 .left {
   padding: 20px;
-  margin: 0; /* Remove vertical margin for equal height */
+  margin: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertically center content */
+  justify-content: center;
 }
 
 .left h2 {
   color: #333;
-  font-family: "Libertinus Sans", sans-serif;
+  font-family: "Mylius Modern", sans-serif !important;
 }
 
 .left p {

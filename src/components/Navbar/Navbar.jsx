@@ -28,21 +28,34 @@ const Navbar = () => {
 
         <ul className="nav-links">
           <li>
-            <Link to="/members">Membership</Link>
+            <Link to="/members" onClick={closeMenu}>
+              Membership
+            </Link>
           </li>
           <li>
-            <Link to="/fleetpage">Fleet</Link>
+            <Link to="/fleetpage" onClick={closeMenu}>
+              Fleet
+            </Link>
           </li>
           <li>
-            <Link to="/experience">Experience</Link>
+            <Link to="/xperience" onClick={closeMenu}>
+              Experience
+            </Link>
           </li>
         </ul>
+
+        <div className="nav-right">
+          <span className="call-us">
+            Call Us: <u>+234 4915-630-1638</u>
+          </span>
+          <button className="quote-btn">Request a Quote</button>
+        </div>
       </nav>
 
       {/* Sidebar */}
       <div className={`sidebar ${menuOpen ? "open" : ""}`}>
         <div className="sidebar-header">
-          <Link to="/">
+          <Link to="/" onClick={closeMenu}>
             <img src={logo} alt="Pal-Aviation Logo" />
           </Link>
         </div>
@@ -58,7 +71,7 @@ const Navbar = () => {
             <li onClick={() => setSidebarPage("fleet")}>Fleet</li>
 
             <li>
-              <a href="#experience" onClick={closeMenu}>
+              <a href="/xperience" onClick={closeMenu}>
                 Experience
               </a>
             </li>

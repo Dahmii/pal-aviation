@@ -14,12 +14,10 @@ const Banner = () => {
         <div className="banner-text">
           <h1>The Pal Aviation Experience</h1>
           <p>
-            Curious about how Pal Aviation can serve your unique travel needs?
-            Let us create a personalized flight plan just for you. Share your
-            most frequent destinations, base location, travel purpose, preferred
-            aircraft type, and peak travel seasons—and our expert aviation team
-            will craft a tailored experience that shows exactly what flying with
-            Pal Aviation can look like.
+            "Tell us your travel needs—destinations, base location, purpose,
+            aircraft preference, and peak seasons—and our aviation experts will
+            design a personalized flight plan that shows what flying with Pal
+            Aviation can look like."
           </p>
           <button className="banner-btn">
             <a href="#book-now">Make an Enquiry</a>

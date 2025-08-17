@@ -1,0 +1,124 @@
+.plan-container {
+  padding: 80px 10%;
+  background-color: #ffffff;
+}
+
+.plan-text h2 {
+  color: #4a4a4a;
+  font-family: "Mylius Modern", sans-serif;
+  font-size: 2.5rem;
+}
+
+.plan-text p {
+  color: #4a4a4a;
+  font-size: 0.9rem;
+  font-family: "Lato", sans-serif;
+  margin: 50px 0 50px 0;
+  line-height: 25px;
+}
+
+.plan-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-end;
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.form-group input[type="date"],
+.form-group select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.form-group input[type="date"]:focus,
+.form-group select:focus {
+  border-color: #e0484d;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(151, 60, 37, 0.2);
+}
+
+.passenger-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.passenger-control button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: #e0484d;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.passenger-control button:hover {
+  background: #e0484d;
+}
+
+.passenger-control span {
+  font-size: 16px;
+  font-weight: 600;
+  min-width: 24px;
+  text-align: center;
+}
+
+.full-width {
+  flex: 1 1 100%;
+}
+
+.quote-btn {
+  width: 100%;
+  padding: 12px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .plan-form {
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 12px;
+    gap: 20px;
+  }
+
+  .form-group {
+    flex: 1 1 100%;
+    margin-bottom: 30px;
+  }
+
+  .quote-btn {
+    width: 100%;
+    align-self: center;
+  }
+}
