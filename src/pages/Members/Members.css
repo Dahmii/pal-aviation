@@ -4,13 +4,20 @@
 }
 
 .members-header {
-  text-align: center;
   margin-bottom: 40px;
 }
 
 .members-header h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 3rem;
+  color: #ff5a5f;
+  margin-top: 20px;
+  font-family: "Mylius Modern", sans-serif;
+}
+
+.members-header p {
+  margin-bottom: 100px;
+  font-family: "Poppins", sans-serif;
+  color: #4a4a4a;
 }
 
 .members-cards {

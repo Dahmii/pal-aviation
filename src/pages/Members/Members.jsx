@@ -3,6 +3,7 @@ import "./Members.css";
 import img1 from "../../assets/img/member1.jpeg";
 import img2 from "../../assets/img/member2.jpeg";
 import img3 from "../../assets/img/member3.jpeg";
+import Banner from "../../components/Banner/Banner";
 
 const Members = () => {
   return (
@@ -51,6 +52,7 @@ const Members = () => {
           </p>
         </div>
       </div>
+      <Banner />
     </section>
   );
 };

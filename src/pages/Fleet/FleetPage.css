@@ -1,13 +1,11 @@
 .fleet-container {
   padding: 80px 10%;
   background: #ffffff;
-  /* text-align: center; */
 }
 
 .fleet-content {
   display: block;
   justify-content: space-between;
-  /* align-items: center; */
   max-width: 1200px;
   margin: 0 auto;
   gap: 30px;

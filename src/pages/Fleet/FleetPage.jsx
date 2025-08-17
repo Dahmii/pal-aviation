@@ -10,6 +10,7 @@ import Learjet from "../../assets/img/Learjet.png";
 import AW139 from "../../assets/img/AW139.png";
 import AW109 from "../../assets/img/AW109.png";
 import "./FleetPage.css";
+import Banner from "../../components/Banner/Banner";
 
 const FleetPage = () => {
   const bannersRef = useRef([]);
@@ -38,6 +39,7 @@ const FleetPage = () => {
           <h2>Fleet</h2>
           <p>Discover Our Exquisite Fleet Collection</p>
         </div>
+
         <div
           className="fleet-banner"
           ref={(el) => (bannersRef.current[0] = el)}
@@ -207,6 +209,7 @@ const FleetPage = () => {
           </div>
         </div>
       </div>
+      <Banner />
     </section>
   );
 };
