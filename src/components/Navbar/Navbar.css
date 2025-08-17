@@ -52,27 +52,41 @@
 }
 
 .call-us {
-  color: #ccc;
-  font-size: 0.9rem;
+  color: #777;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  margin-top: 8px;
+  display: inline-flex; /* keeps text and icons in one line */
+  align-items: center; /* vertically center if icon exists */
+  white-space: nowrap; /* prevent line breaks */
+  gap: 6px; /* space if you have an icon + text */
 }
 
 .quote-btn {
   background: #ff5a5f;
   color: #fff;
   border: none;
-  border-radius: 25px;
-  padding: 6px 6px !important;
-  font-size: 0.9rem !important;
+  border-radius: 30px;
+  padding: 10px 20px !important;
+  font-size: 0.95rem !important;
   font-family: "Poppins", sans-serif;
-  font-weight: 200 !important;
+  font-weight: 500 !important;
   cursor: pointer;
-  margin-top: 10px;
-  transition: background 0.2s, transform 0.2s;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-top: 12px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .quote-btn:hover {
-  background: #e14c4f;
+  background: #e0484d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.quote-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Sidebar */
