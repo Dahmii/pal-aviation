@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import img1 from "../../assets/img/Bombardier-Global-6000.jfif";
 import img2 from "../../assets/img/Gulfstream-GIV-SP.jfif";
-import img3 from "../../assets/img/Bombardier-Dash-8.jfif";
+import img3 from "../../assets/img/Gulfstream-G700.jpeg";
 import "./Experience.css";
 
 const Experience = () => {

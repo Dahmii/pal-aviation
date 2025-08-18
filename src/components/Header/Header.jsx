@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Header.css";
 
 const Header = ({
@@ -17,7 +17,12 @@ const Header = ({
     "Elite Air Travel",
   ];
   const [index, setIndex] = useState(0);
+  const [videoIndex, setVideoIndex] = useState(0);
+  const videoRef = useRef(null);
 
+  const videoSources = ["/videos/header-vid1.webm", "/videos/header-vid2.webm"];
+
+  // Animated text effect
   useEffect(() => {
     if (showAnimatedText) {
       const interval = setInterval(() => {
@@ -27,18 +32,41 @@ const Header = ({
     }
   }, [showAnimatedText]);
 
+  // Handle video switching
+  useEffect(() => {
+    const videoEl = videoRef.current;
+    if (!videoEl) return;
+
+    const handleEnded = () => {
+      setVideoIndex((prev) => (prev + 1) % videoSources.length);
+    };
+
+    videoEl.addEventListener("ended", handleEnded);
+    return () => {
+      videoEl.removeEventListener("ended", handleEnded);
+    };
+  }, []);
+
+  useEffect(() => {
+    const videoEl = videoRef.current;
+    if (videoEl) {
+      videoEl.src = videoSources[videoIndex];
+      videoEl.play();
+    }
+  }, [videoIndex]);
+
   return (
     <section className="header-section">
       {/* Video Background */}
       <video
+        ref={videoRef}
         className="header-video"
         autoPlay
-        loop
         muted
         playsInline
         poster="../../assets/img/background-1.JPG"
       >
-        <source src="/header-vid.webm" type="video/webm" />
+        <source src={videoSources[0]} type="video/webm" />
         Your browser does not support the video tag.
       </video>
 

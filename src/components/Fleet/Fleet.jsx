@@ -1,8 +1,8 @@
 import React from "react";
 import "./Fleet.css";
-import img1 from "../../assets/img/Bombardier-Global-6000.jfif";
-import img2 from "../../assets/img/Gulfstream-GIV-SP.jfif";
-import img3 from "../../assets/img/Bombardier-Dash-8.jfif";
+import img1 from "../../assets/img/Bombardier-Global.jpg";
+import img2 from "../../assets/img/Gulfstream-GIV-SP.jpg";
+import img3 from "../../assets/img/Bombardier-dash.jpeg";
 import { Link } from "react-router-dom";
 
 const Fleet = () => {

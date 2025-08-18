@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from "react";
-import img1 from "../../assets/img/Bombardier-Global-6000.jfif";
-import img2 from "../../assets/img/Gulfstream-GIV-SP.jfif";
+import img1 from "../../assets/img/Bombardier-Global.jpg";
+import img2 from "../../assets/img/Gulfstream-GIV-SP.jpg";
 import img3 from "../../assets/img/Bombardier-Dash-8.jfif";
 import embraer from "../../assets/img/Embraer.png";
-import challanger1 from "../../assets/img/605.png";
-import challanger2 from "../../assets/img/604.png";
-import Hawker from "../../assets/img/Hawker.png";
+import challanger1 from "../../assets/img/605.jpeg";
+import challanger2 from "../../assets/img/604.jpeg";
+import Hawker from "../../assets/img/Hawker.jpg";
 import Learjet from "../../assets/img/Learjet.png";
 import AW139 from "../../assets/img/AW139.png";
 import AW109 from "../../assets/img/AW109.png";
