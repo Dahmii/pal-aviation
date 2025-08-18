@@ -3,13 +3,23 @@ import Select from "react-select";
 import "./Plan.css";
 
 const airportOptions = [
-  { value: "LAX", label: "Los Angeles International (LAX)" },
-  { value: "JFK", label: "John F. Kennedy International (JFK)" },
-  { value: "ORD", label: "Chicago O'Hare (ORD)" },
-  { value: "ATL", label: "Atlanta Hartsfield-Jackson (ATL)" },
-  { value: "DFW", label: "Dallas/Fort Worth (DFW)" },
-  { value: "MIA", label: "Miami International (MIA)" },
-  // add more airports here
+  { value: "LOS", label: "Murtala Muhammed International (LOS) – Lagos" },
+  { value: "ABV", label: "Nnamdi Azikiwe International (ABV) – Abuja" },
+  { value: "PHC", label: "Port Harcourt International (PHC) – Port Harcourt" },
+  { value: "KAN", label: "Mallam Aminu Kano International (KAN) – Kano" },
+  { value: "ENU", label: "Akanu Ibiam International (ENU) – Enugu" },
+  { value: "CBQ", label: "Margaret Ekpo International (CBQ) – Calabar" },
+  {
+    value: "QOW",
+    label: "Sam Mbakwe International Cargo Airport (QOW) – Owerri",
+  },
+  { value: "SKO", label: "Sadiq Abubakar III International (SKO) – Sokoto" },
+  { value: "ILR", label: "Ilorin International (ILR) – Ilorin" },
+  { value: "YOL", label: "Yola Airport (YOL) – Yola" },
+  { value: "KAD", label: "Kaduna International (KAD) – Kaduna" },
+  { value: "AKR", label: "Akure Airport (AKR) – Akure" },
+  { value: "BNI", label: "Benin Airport (BNI) – Benin City" },
+  { value: "IBA", label: "Ibadan Airport (IBA) – Ibadan" },
 ];
 
 export default function PlanForm() {
