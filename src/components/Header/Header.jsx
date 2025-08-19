@@ -20,7 +20,7 @@ const Header = ({
   const [videoIndex, setVideoIndex] = useState(0);
   const videoRef = useRef(null);
 
-  const videoSources = ["/videos/header-vid1.webm", "/videos/header-vid2.webm"];
+  const videoSources = ["/videos/header-vid1.webm", "/videos/header-vid2.mp4"];
 
   // Animated text effect
   useEffect(() => {
