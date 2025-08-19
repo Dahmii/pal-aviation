@@ -10,12 +10,12 @@ const Header = ({
   showButton = true,
   children,
 }) => {
-  const words = [
-    "Luxury Travels",
-    "Exclusive Journeys",
-    "Premium Getaways",
-    "Elite Air Travel",
+  const taglines = [
+    "Experience the Epitome of Luxury Travels",
+    "Redefining the Art of Airborne Elegance",
+    "Your Gateway to Unmatched Journeys",
   ];
+
   const [index, setIndex] = useState(0);
   const [videoIndex, setVideoIndex] = useState(0);
   const videoRef = useRef(null);
@@ -26,8 +26,13 @@ const Header = ({
   useEffect(() => {
     if (showAnimatedText) {
       const interval = setInterval(() => {
-        setIndex((prevIndex) => (prevIndex + 1) % words.length);
-      }, 2000);
+        setIndex((prevIndex) => {
+          if (prevIndex + 1 === taglines.length) {
+            return 0; // immediately restart from first sentence
+          }
+          return prevIndex + 1;
+        });
+      }, 3000);
       return () => clearInterval(interval);
     }
   }, [showAnimatedText]);
@@ -77,10 +82,7 @@ const Header = ({
       <div className="header-container">
         <div className="header-text">
           {showAnimatedText ? (
-            <h1>
-              Experience the <br /> Epitome of{" "}
-              <span className="changing-text">{words[index]}</span>
-            </h1>
+            <h1 className="changing-text">{taglines[index]}</h1>
           ) : (
             <h1>{title || "Experience the Epitome of Luxury Travels"}</h1>
           )}
@@ -91,13 +93,13 @@ const Header = ({
                 "Customized travel solutions for unforgettable journeys."}
           </p>
           {children}
-        </div>
 
-        {showButton && (
-          <div className="hero-btn">
-            <a href={buttonLink}>{buttonText}</a>
-          </div>
-        )}
+          {showButton && (
+            <div className="hero-btn">
+              <a href={buttonLink}>{buttonText}</a>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );

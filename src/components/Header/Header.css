@@ -47,6 +47,14 @@
 /* ===============================
    TEXT STYLES
    =============================== */
+
+.header-text {
+  text-align: left;
+  max-width: 700px;
+  margin: 0;
+  /* padding-left: 5%;  */
+}
+
 .header-text h1 {
   font-size: 3.8rem;
   font-weight: 400;
@@ -65,8 +73,8 @@
   font-size: 1.25rem;
   font-weight: 300;
   line-height: 1.7;
-  max-width: 700px;
-  margin: 0 auto 2rem auto;
+  max-width: 600px; /* slightly smaller so it wraps nicely */
+  margin: 0 0 2rem 0; /* remove auto centering, keep spacing below */
 }
 
 /* ===============================
@@ -80,6 +88,7 @@
   text-align: center;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  margin-left: 1%; /* aligns with text padding */
 }
 
 .hero-btn a {
