@@ -12,8 +12,8 @@ const Header = ({
 }) => {
   const taglines = [
     "Experience the Epitome of Luxury Travels",
-    "Redefining the Art of Airborne Elegance",
-    "Your Gateway to Unmatched Journeys",
+    "Where Luxury meets the skies",
+    "Redefining Air Travel",
   ];
 
   const [index, setIndex] = useState(0);

@@ -56,7 +56,7 @@
 }
 
 .header-text h1 {
-  font-size: 3.8rem;
+  font-size: 2.8rem;
   font-weight: 400;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -70,7 +70,7 @@
 
 .header-text p {
   font-family: "Lato", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1.7;
   max-width: 600px; /* slightly smaller so it wraps nicely */
@@ -134,10 +134,10 @@
     height: 70vh;
   }
   .header-text h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   .header-text p {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
   .hero-btn {
     padding: 10px 20px;
