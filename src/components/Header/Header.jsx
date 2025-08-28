@@ -10,11 +10,7 @@ const Header = ({
   showButton = true,
   children,
 }) => {
-  const taglines = [
-    "Experience the Epitome of Luxury Travels",
-    "Where Luxury meets the skies",
-    "Redefining Air Travel",
-  ];
+  const taglines = ["Where Luxury meets the skies", "Redefining Air Travel"];
 
   const [index, setIndex] = useState(0);
   const [videoIndex, setVideoIndex] = useState(0);

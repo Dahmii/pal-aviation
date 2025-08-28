@@ -3,7 +3,7 @@ import img1 from "../../assets/img/Bombardier-Global.jpg";
 import img2 from "../../assets/img/Gulfstream-GIV-SP.jpg";
 import img3 from "../../assets/img/Bombardier-Dash-8.jfif";
 import embraer from "../../assets/img/Embraer.png";
-import challanger1 from "../../assets/img/605.jpeg";
+import challanger1 from "../../assets/img/605.jpg";
 import challanger2 from "../../assets/img/604.jpeg";
 import Hawker from "../../assets/img/Hawker.jpg";
 import Learjet from "../../assets/img/Learjet.png";
