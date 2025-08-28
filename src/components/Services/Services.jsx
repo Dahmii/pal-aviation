@@ -7,6 +7,7 @@ import serviceImage3 from "../../assets/img/experience-2.jpeg";
 import serviceImage4 from "../../assets/img/services-1.jpeg";
 import serviceImage5 from "../../assets/img/hangar.jpg";
 import serviceImage6 from "../../assets/img/about-1.jpeg";
+import serviceImage7 from "../../assets/img/medevec.webp";
 
 const servicesList = [
   {
@@ -44,6 +45,12 @@ const servicesList = [
     description:
       "We source high-quality aircraft parts to ensure safety and performance. Our extensive network allows us to procure the best components for various aircraft models.",
     image: serviceImage6,
+  },
+  {
+    title: "Medical Evacuation",
+    description:
+      "We provide rapid and reliable air ambulance services for critical patients. Our medical evacuation solutions ensure safe transport with specialized equipment and trained professionals, delivering urgent care when every second counts.",
+    image: serviceImage7,
   },
 ];
 
