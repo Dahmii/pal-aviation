@@ -38,11 +38,11 @@ const Xperience = () => {
       <div className="xperience-details">
         <h2>Private Jet In-Flight Services</h2>
         <p>
-          VistaJet redefines private aviation with its exquisite cabin design
-          and world-class in-flight services. Stepping aboard a VistaJet
-          aircraft is like entering a luxurious home in the sky, where every
-          detail is meticulously crafted to ensure comfort, productivity, and
-          relaxation.
+          Pal Aviation sets a new standard in private aviation with its refined
+          cabin experience and dedicated in-flight services. Stepping aboard a
+          Pal Aviation aircraft is like entering a world of comfort and
+          reliability, where every detail is designed to enhance safety,
+          productivity, and relaxation throughout your journey.
         </p>
       </div>
 
