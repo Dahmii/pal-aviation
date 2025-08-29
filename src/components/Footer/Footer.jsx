@@ -20,7 +20,7 @@ const Footer = () => {
               <a href="#">About Pal-Aviation</a>
             </li>
             <li>
-              <a href="#">Fleet Details</a>
+              <a href="fleetpage">Fleet Details</a>
             </li>
             <li>
               <a href="#">Safety Standards</a>
@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
 
         {/* Tickets Section */}
-        <div className="footer-section">
+        {/* <div className="footer-section">
           <h3>Tickets & Booking</h3>
           <ul>
             <li>
@@ -54,7 +54,7 @@ const Footer = () => {
               <a href="#">Manage Bookings</a>
             </li>
           </ul>
-        </div>
+        </div> */}
 
         {/* Contact Section */}
         <div className="footer-section">
