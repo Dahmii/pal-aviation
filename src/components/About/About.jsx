@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./About.css";
-import aboutImg from "../../assets/img/about.JPG"; // Update with your image path
+import aboutImg from "../../assets/img/about.JPG";
 
 const About = () => {
   const textRef = useRef(null);

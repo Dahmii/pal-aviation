@@ -1,0 +1,163 @@
+/* =======================
+   Container
+======================= */
+.about-us-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* =======================
+   Intro Section
+======================= */
+.about-intro {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  flex-wrap: nowrap; /* Prevent stacking on desktop */
+  justify-content: flex-start;
+}
+
+.intro-image {
+  flex: 0 0 45%;
+  max-width: 45%;
+  order: 0;
+}
+
+.intro-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.intro-image img:hover {
+  transform: scale(1.02);
+}
+
+.intro-text {
+  flex: 0 0 55%;
+  max-width: 55%;
+  order: 1;
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+/* =======================
+   Cards: Vision, Mission, Values
+======================= */
+.about-card {
+  background: #f9f9f9;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.about-card h2 {
+  font-size: 2rem;
+  color: #ff5a5f;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-card p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.about-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-card li {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1.8rem;
+}
+
+.about-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #ff5a5f;
+  font-weight: bold;
+}
+
+/* =======================
+   Responsive Adjustments
+======================= */
+
+/* Tablets */
+@media (max-width: 1200px) {
+  .intro-image {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+  .intro-text {
+    flex: 0 0 52%;
+    max-width: 52%;
+  }
+}
+
+/* Smaller tablets / large mobiles */
+@media (max-width: 992px) {
+  .about-intro {
+    flex-direction: column;
+    flex-wrap: wrap; /* allow stacking */
+    text-align: center;
+  }
+
+  .intro-image,
+  .intro-text {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .intro-image img {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-card h2 {
+    font-size: 1.7rem;
+  }
+
+  .intro-text p,
+  .about-card p,
+  .about-card li {
+    font-size: 1rem;
+  }
+
+  .about-intro {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 480px) {
+  .intro-text p,
+  .about-card li {
+    font-size: 0.95rem;
+  }
+}
