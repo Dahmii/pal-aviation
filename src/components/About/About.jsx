@@ -33,6 +33,9 @@ const About = () => {
             <strong>Pal Aviation</strong> is your trusted partner in private
             aviation.
           </p>
+          <div className="about-btn">
+            <a href="/about-us">Learn more</a>
+          </div>
         </div>
         <div className="about-image">
           <img src={aboutImg} alt="About Pal Aviation" />
