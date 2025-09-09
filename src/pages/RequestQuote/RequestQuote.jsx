@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import Header from "../../components/Header/Header";
 import "./RequestQuote.css";
 
@@ -15,25 +16,63 @@ const RequestQuote = () => {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission (e.g., send to backend or email service)
-    alert("Your request has been submitted!");
-    setForm({
-      name: "",
-      email: "",
-      phone: "",
-      departure: "",
-      destination: "",
-      date: "",
-      passengers: "",
-      aircraftType: "",
-      message: "",
-    });
+    setLoading(true);
+
+    // Send details to Pal Aviation business email
+    emailjs
+      .send(
+        "service_h5f5y3p", // Service ID
+        "template_jk42smo", // Template ID for business
+        form,
+        "KDM4I53FtVmvCaAwz" // Public Key
+      )
+      .then(
+        (result) => {
+          // ✅ Send confirmation email to customer
+          emailjs.send(
+            "service_h5f5y3p",
+            "template_eg9pf05", // Confirmation template ID
+            {
+              name: form.name,
+              email: form.email,
+              departure: form.departure,
+              destination: form.destination,
+              date: form.date,
+              passengers: form.passengers,
+              aircraftType: form.aircraftType,
+              phone: form.phone,
+            },
+            "KDM4I53FtVmvCaAwz"
+          );
+
+          alert("Your request has been submitted successfully!");
+          setForm({
+            name: "",
+            email: "",
+            phone: "",
+            departure: "",
+            destination: "",
+            date: "",
+            passengers: "",
+            aircraftType: "",
+            message: "",
+          });
+          setLoading(false);
+        },
+        (error) => {
+          console.error("EmailJS Error:", error);
+          alert("Oops! Something went wrong. Please try again.");
+          setLoading(false);
+        }
+      );
   };
 
   return (
@@ -114,13 +153,23 @@ const RequestQuote = () => {
               onChange={handleChange}
               required
             />
-            <input
-              type="text"
+            <select
               name="aircraftType"
-              placeholder="Preferred Aircraft Type"
               value={form.aircraftType}
               onChange={handleChange}
-            />
+              required
+            >
+              <option value="">Select Preferred Aircraft</option>
+              <option value="Bombardier">Bombardier</option>
+              <option value="Gulfstream G550/GIV">Gulfstream G550/GIV</option>
+              <option value="Embraer Legacy 600">Embraer Legacy 600</option>
+              <option value="Challenger 605">Challenger 605</option>
+              <option value="Challenger 604">Challenger 604</option>
+              <option value="Hawker XP">Hawker XP</option>
+              <option value="Learjet">Learjet</option>
+              <option value="AW139 Helicopter">AW139 Helicopter</option>
+              <option value="AW109 Helicopter">AW109 Helicopter</option>
+            </select>
           </div>
           <textarea
             name="message"
@@ -129,8 +178,8 @@ const RequestQuote = () => {
             onChange={handleChange}
             rows={4}
           />
-          <button type="submit" className="quote-btn">
-            Submit Request
+          <button type="submit" className="quote-btn" disabled={loading}>
+            {loading ? <span className="spinner"></span> : "Submit Request"}
           </button>
         </form>
       </main>

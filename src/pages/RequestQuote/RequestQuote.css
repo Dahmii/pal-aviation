@@ -26,7 +26,8 @@
 }
 
 .quote-form input,
-.quote-form textarea {
+.quote-form textarea,
+.quote-form select {
   flex: 1;
   padding: 12px 14px;
   border: 1px solid #e0e0e0;
@@ -35,13 +36,25 @@
   font-family: "Poppins", sans-serif;
   background: #fff;
   color: #333;
-  transition: border 0.2s;
+  transition: border 0.2s, box-shadow 0.2s;
+  appearance: none; /* Removes default browser styling for select */
 }
 
 .quote-form input:focus,
-.quote-form textarea:focus {
+.quote-form textarea:focus,
+.quote-form select:focus {
   border: 1.5px solid #ff5a5f;
   outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 90, 95, 0.15);
+}
+
+.quote-form select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='%23333' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px; /* room for dropdown arrow */
 }
 
 .quote-form textarea {
@@ -60,13 +73,14 @@
   font-weight: 600;
   cursor: pointer;
   margin-top: 10px;
-  transition: background 0.2s, transform 0.2s;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .quote-btn:hover {
   background: #e14b50;
   transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 @media (max-width: 600px) {
@@ -77,4 +91,57 @@
     flex-direction: column;
     gap: 8px;
   }
+}
+.quote-form h2 {
+  text-align: center;
+  margin-bottom: 16px;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+.quote-form p {
+  text-align: center;
+  margin-bottom: 24px;
+  font-family: "Poppins", sans-serif;
+  color: #666;
+}
+.quote-form .required {
+  color: #ff5a5f;
+}
+.error-message {
+  color: #ff5a5f;
+  font-size: 0.875rem;
+  margin-top: -8px;
+  margin-bottom: 8px;
+  font-family: "Poppins", sans-serif;
+}
+.success-message {
+  color: #28a745;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 16px;
+  font-family: "Poppins", sans-serif;
+}
+.spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.quote-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
