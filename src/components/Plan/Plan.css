@@ -19,7 +19,7 @@
 
 .plan-form {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* keeps inline layout */
   gap: 20px;
   align-items: flex-end;
   margin-bottom: 30px;
@@ -28,10 +28,12 @@
   padding: 20px;
   background: #fff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: max-height 0.5s ease, opacity 0.4s ease;
+  overflow: hidden;
 }
 
 .form-group {
-  flex: 1 1 200px;
+  flex: 1 1 200px; /* responsive inline sizing */
   display: flex;
   flex-direction: column;
   font-family: "Poppins", sans-serif;
@@ -60,6 +62,54 @@
   box-shadow: 0 0 0 3px rgba(151, 60, 37, 0.2);
 }
 
+.form-group input[type="text"],
+.form-group select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus {
+  border-color: #e0484d;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(151, 60, 37, 0.2);
+}
+
+.form-group input[type="email"],
+.form-group select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.form-group input[type="email"]:focus,
+.form-group select:focus {
+  border-color: #e0484d;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(151, 60, 37, 0.2);
+}
+
+.form-group input[type="tel"],
+.form-group select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.form-group input[type="tel"]:focus,
+.form-group select:focus {
+  border-color: #e0484d;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(151, 60, 37, 0.2);
+}
+
 .passenger-control {
   display: flex;
   align-items: center;
@@ -80,7 +130,7 @@
 }
 
 .passenger-control button:hover {
-  background: #e0484d;
+  background: #c73a3f;
 }
 
 .passenger-control span {
@@ -102,10 +152,54 @@
   border: none;
   cursor: pointer;
   font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease;
 }
 
+.quote-btn:hover {
+  background: #333;
+}
+
+/* Expand/Collapse section */
+.expand-section {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.4s ease;
+  display: flex;
+  flex-wrap: wrap; /* keep inline layout */
+  gap: 20px;
+}
+
+.expand-section.show {
+  max-height: 1000px; /* big enough for all */
+  opacity: 1;
+}
+
+/* React Select custom */
+.react-select__control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  min-height: 44px;
+  box-shadow: none;
+}
+.react-select__control--is-focused {
+  border-color: #e0484d;
+  box-shadow: 0 0 0 3px rgba(151, 60, 37, 0.2);
+}
+.react-select__placeholder {
+  font-size: 14px;
+  color: #777;
+}
+.react-select__single-value {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-  .plan-form {
+  .plan-form,
+  .expand-section {
     flex-direction: column;
     align-items: stretch;
     border-radius: 12px;
@@ -114,7 +208,7 @@
 
   .form-group {
     flex: 1 1 100%;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   .quote-btn {
