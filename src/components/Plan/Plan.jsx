@@ -261,9 +261,9 @@ export default function PlanForm() {
         </div>
       </form>
 
-      <p className="multi-city">
+      {/* <p className="multi-city">
         Need more flights? <a href="#">Switch to multi-city</a>
-      </p>
+      </p> */}
     </div>
   );
 }
